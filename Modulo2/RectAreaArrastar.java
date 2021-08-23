@@ -22,7 +22,7 @@ class Rect {
 
 	int Area (){
 		int area;
-		area = w*h;
+		area = this.w*this.h;
 		return area;
 	}
 
