@@ -9,7 +9,7 @@ public class RectPaintApp {
     	}
 }
 
-public class RectPaintFrame extends JFrame {
+class RectPaintFrame extends JFrame {
     	Rect r1,r2,r3;
 
     	RectPaintFrame () {
@@ -35,24 +35,24 @@ public class RectPaintFrame extends JFrame {
     	}
 }
 
-public class Rect {
+class Rect {
     	int x, y;
     	int w, h;
 	int r,g2,b;
 
-    	public Rect (int x, int y, int w, int h) {
+    	Rect (int x, int y, int w, int h) {
         	this.x = x;
         	this.y = y;
         	this.w = w;
         	this.h = h;
     	}
 
-   	public void print () {
+   	void print () {
        		System.out.format("Retangulo de tamanho (%d,%d) na posicao (%d,%d).\n",
             		this.w, this.h, this.x, this.y);
     	}
 
-	public void paint(Graphics g){
+	void paint(Graphics g){
 		this.r = r;
 		this.g2 = g2;
 		this.b = b;
