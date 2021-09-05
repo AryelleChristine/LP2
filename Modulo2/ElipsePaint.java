@@ -60,7 +60,7 @@ class Elipse{
 
 	void paint(Graphics g){
 		Graphics2D g2d = (Graphics2D) g;
-
+        	
 		g.setColor(new Color(this.r,this.g2,this.b));
 		g.fillOval (this.x, this.y, this.w, this.h);
 		g.setColor(new Color(this.r2,this.g3,this.b2));
