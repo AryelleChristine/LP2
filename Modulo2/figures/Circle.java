@@ -2,12 +2,12 @@ package figures;
 
 import java.awt.*;
 
-public class CirculoPaint {
+public class Circle {
     int x, y;
     int w, h;
     int r,g2,b;
 
-    public CirculoPaint (int x, int y, int w, int h,int r,int g2,int b) {
+    public Circle (int x, int y, int w, int h,int r,int g2,int b) {
         this.x = x;
         this.y = y;
         this.w = w;
