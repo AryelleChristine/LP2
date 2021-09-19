@@ -4,16 +4,16 @@ import javax.swing.*;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Ellipse2D.Double;
 
-class ElipsePaintApp {
+class EllipsePaintApp {
 	public static void main (String[] args) {
 		ElipsePaintFrame frame = new ElipsePaintFrame();
 		frame.setVisible(true);
 	}
 }
 
-class ElipsePaintFrame extends JFrame {
-	Elipse e1,e2,e3;
-	ElipsePaintFrame (){
+class EllipsePaintFrame extends JFrame {
+	Ellipse e1,e2,e3;
+	EllipsePaintFrame (){
 		this.addWindowListener(
 			new WindowAdapter(){
 				public void windowClosing (WindowEvent e) {
@@ -23,9 +23,9 @@ class ElipsePaintFrame extends JFrame {
 		);
 	this.setTitle("Elipse");
 	this.setSize(500,500);
-	this.e1 = new Elipse(50,50,100,50,25,25,112,173,255,47);
-	this.e2 = new Elipse(100,150,200,100,255,0,255,128,0,128);
-	this.e3 = new Elipse(250,250,300,150,255,182,193,20,20,44);
+	this.e1 = new Ellipse(50,50,100,50,25,25,112,173,255,47);
+	this.e2 = new Ellipse(100,150,200,100,255,0,255,128,0,128);
+	this.e3 = new Ellipse(250,250,300,150,255,182,193,20,20,44);
 	
 	}
 
@@ -36,21 +36,22 @@ class ElipsePaintFrame extends JFrame {
 		this.e3.paint(g);
 	}
 }
-class Elipse{
-	int x,y,w,h;
-	int r,g2,b;
-	int r2,g3,b2;
-	public Elipse(int x, int y, int w, int h,int r,int g2,int b,int r2,int g3,int b2){
+class Ellipse{
+	int x,y;
+	int w,h;
+	int rf,gf,bf;
+	int rc,gc,bc;
+	public Ellipse(int x, int y, int w, int h,int rf,int gf,int bf,int rc,int gc,int bc){
 		this.x = x;
         	this.y = y;
         	this.w = w;
         	this.h = h;
-		this.r = r;
-		this.g2 = g2;
-		this.b = b;
-		this.r2 = r2;
-		this.g3 = g3;
-		this.b2 = b2;
+		this.rf = rf;
+		this.gf = gf;
+		this.bf = bf;
+		this.rc = rc;
+		this.gc = gc;
+		this.bc = bc;
 	}
 
 	void print (){
@@ -61,9 +62,9 @@ class Elipse{
 	void paint(Graphics g){
 		Graphics2D g2d = (Graphics2D) g;
         	
-		g.setColor(new Color(this.r,this.g2,this.b));
+		g.setColor(new Color(this.rf,this.gf,this.bf));
 		g.fillOval (this.x, this.y, this.w, this.h);
-		g.setColor(new Color(this.r2,this.g3,this.b2));
+		g.setColor(new Color(this.rc,this.gc,this.bc));
         	g2d.draw(new Ellipse2D.Double(this.x,this.y, this.w,this.h));	
 	
    	 }
