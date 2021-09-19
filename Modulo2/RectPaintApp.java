@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class RectPaintApp {
+class RectPaintApp {
 	public static void main (String[] args) {
         	RectPaintFrame frame = new RectPaintFrame();
         	frame.setVisible(true);
@@ -10,7 +10,7 @@ public class RectPaintApp {
 }
 
 class RectPaintFrame extends JFrame {
-    	Rect r1,r2,r3;
+    	Rect rect1,rect2,rect3;
 
     	RectPaintFrame () {
         	this.addWindowListener (
@@ -20,18 +20,18 @@ class RectPaintFrame extends JFrame {
                 		}
             		}
         	);
-        this.setTitle("Retangulo");
+        this.setTitle("Retangulos");
         this.setSize(300, 300);
-        this.r1 = new Rect(100,150, 110,50,250,30,0,0,203,55);
-	this.r2 = new Rect(250,270, 100,50,30,0,250,0,0,250);
-	this.r3 = new Rect(350,370, 200,80,0,250,205,200,30,10);
+        this.rect1 = new Rect(100,150, 110,50,250,30,0,0,203,55);
+	this.rect2 = new Rect(250,270, 100,50,30,0,250,0,0,250);
+	this.rect3 = new Rect(350,370, 200,80,0,250,205,200,30,10);
     	}
 
     	public void paint (Graphics g) {
         	super.paint(g);
-        	this.r1.paint(g);
-		this.r2.paint(g);
-		this.r3.paint(g);
+        	this.rect1.paint(g);
+		this.rect2.paint(g);
+		this.rect3.paint(g);
     	}
 }
 
