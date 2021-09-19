@@ -2,12 +2,12 @@ package figures;
 
 import java.awt.*;
 
-public class QuadradoPaint {
+public class Square {
     int x, y;
     int w, h;
     int r,g2,b;
 
-    public QuadradoPaint (int x, int y, int w, int h,int r,int g2,int b) {
+    public Square (int x, int y, int w, int h,int r,int g2,int b) {
         this.x = x;
         this.y = y;
         this.w = w;
