@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Random;
 
+import figures.*;
+
 class ListApp {
     public static void main (String[] args) {
         ListFrame frame = new ListFrame();
@@ -12,7 +14,8 @@ class ListApp {
 }
 
 class ListFrame extends JFrame {
-    ArrayList<Ellipse> rs = new ArrayList<Ellipse>();
+    ArrayList<Ellipse> re = new ArrayList<Ellipse>();
+    ArrayList<Rect> rs = new ArrayList<Rect>();
     Random rand = new Random();
 
     ListFrame () {
@@ -32,43 +35,40 @@ class ListFrame extends JFrame {
                         int y = rand.nextInt(350);
                         int w = rand.nextInt(50);
                         int h = rand.nextInt(50);
-                        rs.add(new Ellipse(x,y, w,h));
+                        re.add(new Ellipse(x,y, w,h));
                         repaint();  // outer.repaint()
                     }
                 }
             }
         );
 
-        this.setTitle("Lista de Elipse");
+	this.addKeyListener (
+            new KeyAdapter() {
+                public void keyPressed (KeyEvent evt) {
+                    if (evt.getKeyChar() == 'r') {
+                        int x = rand.nextInt(350);
+                        int y = rand.nextInt(350);
+                        int w = rand.nextInt(50);
+                        int h = rand.nextInt(50);
+                        rs.add(new Rect(x,y, w,h));
+                        repaint();  // outer.repaint()
+                    }
+                }
+            }
+        );
+
+        this.setTitle("Lista de Elipses e Retangulos");
         this.setSize(350, 350);
     }
 
     public void paint (Graphics g) {
         super.paint(g);
-        for (Ellipse e: this.rs) {
+        for (Ellipse e: this.re) {
             e.paint(g);
         }
-    }
+	for (Rect r: this.rs){
+	    r.paint(g);
+    	}
+     }
 }
 
-class Ellipse {
-    int x, y;
-    int w, h;
-
-    Ellipse (int x, int y, int w, int h) {
-        this.x = x;
-        this.y = y;
-        this.w = w;
-        this.h = h;
-    }
-
-    void print () {
-        System.out.format("Elipse de tamanho (%d,%d) na posicao (%d,%d).\n",
-            this.w, this.h, this.x, this.y);
-    }
-
-    void paint (Graphics g) {
-        Graphics2D g2d = (Graphics2D) g;
-        g2d.drawOval(this.x,this.y, this.w,this.h);
-    }
-}
