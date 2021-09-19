@@ -22,9 +22,10 @@ class RectPaintFrame extends JFrame {
         	);
         this.setTitle("Retangulos");
         this.setSize(300, 300);
-        this.rect1 = new Rect(100,150, 110,50,250,30,0,0,203,55);
-	this.rect2 = new Rect(250,270, 100,50,30,0,250,0,0,250);
-	this.rect3 = new Rect(350,370, 200,80,0,250,205,200,30,10);
+	//250,30,0
+        this.rect1 = new Rect(100,150,110,50,250,30,0,0,203,55);
+	this.rect2 = new Rect(250,270,100,50,30,0,250,150,70,0);
+	this.rect3 = new Rect(350,370,200,80,0,250,205,200,30,10);
     	}
 
     	public void paint (Graphics g) {
@@ -38,20 +39,20 @@ class RectPaintFrame extends JFrame {
 class Rect {
     	int x, y;
     	int w, h;
-	int r,g2,b;
-	int r2,g3,b2;
+	int rf,gf,bf;
+	int rc,gc,bc;
 
-    	Rect (int x, int y, int w, int h,int r,int g2,int b,int r2,int g3,int b2) {
+    	Rect (int x, int y, int w, int h,int rf,int gf,int bf,int rc,int gc,int bc) {
         	this.x = x;
         	this.y = y;
         	this.w = w;
         	this.h = h;
-		this.r = r;
-		this.g2 = g2;
-		this.b = b;
-		this.r2 = r2;
-		this.g3 = g3;
-		this.b2 = b2;
+		this.rf = rf;
+		this.gf = gf;
+		this.bf = bf;
+		this.rc = rc;
+		this.gc = gc;
+		this.bc = bc;
     	}
 
    	void print () {
@@ -62,9 +63,9 @@ class Rect {
 	void paint(Graphics g){
 		Graphics2D g2d = (Graphics2D) g;
 
-		g.setColor(new Color(this.r,this.g2,this.b));
+		g.setColor(new Color(this.rf,this.gf,this.bf));
 		g.fillRect (this.x, this.y, this.w, this.h);
-		g.setColor(new Color(this.r2,this.g3,this.b2));
+		g.setColor(new Color(this.rc,this.gc,this.bc));
         	g2d.drawRect(this.x,this.y, this.w,this.h);	
 	
    	 }
