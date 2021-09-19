@@ -12,10 +12,10 @@ class PackApp {
 }
 
 class PackFrame extends JFrame {
-	RectPaint r1;
-	EllipsePaint e1;
-	CirculoPaint c1;
-	QuadradoPaint q1;
+	Rect r1;
+	Ellipse e1;
+	Circle c1;
+	Square q1;
 
 	PackFrame () {
 		this.addWindowListener (
@@ -27,10 +27,10 @@ class PackFrame extends JFrame {
 		);
 	this.setTitle("Java Packages");
 	this.setSize(350, 350);
-        this.r1 = new RectPaint(50,50, 100,30,128,0,128);
-        this.e1 = new EllipsePaint(50,100, 100,30,255,0,255);
-	this.c1 = new CirculoPaint(50,150,100,100,220,20,60);
-	this.q1 = new QuadradoPaint(70,300,60,60,255,69,0);
+        this.r1 = new Rect(50,50, 100,30,128,0,128);
+        this.e1 = new Ellipse(50,100, 100,30,255,0,255);
+	this.c1 = new Circle(50,150,100,100,220,20,60);
+	this.q1 = new Square(70,300,60,60,255,69,0);
 	
     }
 
