@@ -4,9 +4,9 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Random;
 
-import figures.*;
+import figuress.*;
 
-class ListApp {
+class ListAppH {
     public static void main (String[] args) {
         ListFrame frame = new ListFrame();
         frame.setVisible(true);
@@ -36,12 +36,12 @@ class ListFrame extends JFrame {
                     if (evt.getKeyChar() == 'r') {
                         Rect r = new Rect(x,y, w,h);
                         figs.add(r);
-                    } else if (evt.getKeyChar() == 'e') {
+                    }else if (evt.getKeyChar() == 'e') {
                         figs.add(new Ellipse(x,y, w,h));
                     }else if (evt.getKeyChar() == 'c'){
-			figs.add(new Circle(x,y,w,h));
+			figs.add(new Circle(x,y,h,h));
 		    }else if (evt.getKeyChar() == 'q'){
-			Square q = new Square(x,y,w,h);
+			Square q = new Square(x,y,h,h);
 			figs.add(q);
 		    }
                     repaint();
