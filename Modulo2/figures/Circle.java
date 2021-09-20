@@ -5,7 +5,7 @@ import java.awt.*;
 public class Circle {
     int x, y;
     int w, h;
-    int r,g2,b;
+    int rf,gf,bf;
 
     public Circle (int x, int y, int w, int h,int rf,int gf,int bf) {
         this.x = x;
@@ -24,9 +24,9 @@ public class Circle {
 
     public void paint (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-	    
+
         g2d.drawOval(this.x,this.y, this.w,this.h);
-	g.fillOval(this.x,this.y,this.w,this.h);
 	g.setColor(new Color(this.rf,this.gf,this.bf));
+	g.fillOval(this.x,this.y,this.w,this.h);
     }
 }
