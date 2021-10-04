@@ -134,21 +134,7 @@ class ListFrame extends JFrame {
 		                        break;
 		                        }
                                   
-		            case 'c' :{
-		                        int x = pp.x;
-		                        int y = pp.y;
-		                        int w = rand.nextInt(100);
-		                        int h = rand.nextInt(50);
-		                        Color fundo = new Color(rand.nextInt(256),rand.nextInt(256),rand.nextInt(256),255);
-		                        Color contorno = new Color(rand.nextInt(256),rand.nextInt(256),rand.nextInt(256),255);
-		                        Trapezio c = new Trapezio(x,y, w,h,fundo,contorno);                       
-		                        figs.add(c);
-		                        c.print();
-		                        repaint(); // outer.repaint()
-                                        break;     
-                                    
-		                 }
-                                 
+		            
                             case 'm':{
                                      
                                         if(foco!=null){
