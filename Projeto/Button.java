@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package ProjetoLP2;
+
+package Projeto;
 
 import figures.*;
 import ivisible.Ivisivel;
@@ -18,22 +14,18 @@ public class Button implements Ivisivel {
     public int idx;
     private Figure fig;
     Random rand = new Random();
-    
-    
-
+   
     public Button(int idx, Figure fig) {
         this.idx = idx;
         this.fig = fig;
         
     }
-    
     public ArrayList<Figure> limpar_tudo(ArrayList<Figure> elementos){
         if(this.idx==5){
             elementos.removeAll(elementos);
         }
         return elementos;
     }
-    
     
     public Figure Create_figurebtn(int xf, int yf){
         
@@ -85,20 +77,10 @@ public class Button implements Ivisivel {
                 
                 y.print();
                 return y;
-            
-            
             }
-
     }    
         return null;
-       
-    
-    
     }
-    
-
-
-    
     @Override
     public boolean clicked(int x, int y){
         return Botao.contains(x, y);     
@@ -114,8 +96,6 @@ public class Button implements Ivisivel {
                 gb.fill(Botao);
                 gb.setColor(Color.black);
                 gb.draw(Botao);
-                
-            
               }
               else{
                   gb.setColor(Color.LIGHT_GRAY);
