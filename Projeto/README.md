@@ -1,22 +1,33 @@
+Explicando uso:
 
-Teclas de desenho:
+1)A figura é adicionada onde a seta do mouse está posicionada
 
-Tecla r - Gera um novo retângulo na posição do mouse; 
-Tecla e - Gera uma nova elipse na posição do mouse; 
-Tecla l - Gera uma linha na posição do mouse;
-Tecla t - Gera um triângulo na posição do mouse; 
+2)A figura só pode ser movimentada quando ela está com o foco tanto com o teclado quanto com o mouse
 
-Teclas de movimentação:
-Pra selecionar um objeto, basta clicar no objeto que ele fica selecionado, caso queira movimentar o objeto use as teclas:
+3)Pode-se movimentar a figura com o mouse quando a figura está pressionada pelo clique do botão esquerdo do mouse
 
-Tecla w - Para mover a figura para cima; 
-Tecla s - Para mover a figura para baixo; 
-Tecla a - Para mover a figura para o lado esquerdo; 
-Tecla d - Para mover a figura para a direita; 
+4)Para movimentar pelas teclas:
 
-Para excluir a figura use a tecla <Delete>
+'para cima' -> movimenta a figura para cima,'para baixo' -> movimenta a tecla para baixo,'para esquerda' -> movimenta a tecla para esquerda,'para direita' -> movimenta a figura para direita.
 
-Para trocar as cores dos objetos mude os valores das variaveis:
+Criação,Remoção e Ajustes:
 
-r,g,b - Para mudar a cor de preenchimento;
-r1,g1,b1 - Para mudar a cor de contorno da figura;
+-A tecla 'r' adiciona retangulos
+
+-A tecla 'e' adiciona elipses
+
+-A tecla 'h' adiciona hexagonos
+
+-A tecla 't' adiciona triangulos
+
+-A tecla 'enter' alterna o foco entre as figuras
+
+-A tecla 'p' muda a cor de fundo do foco
+
+-A tecla 'c' muda a cor de contorno do foco
+
+-A tecla 'a' aumenta a altura e a largura da figura que está em foco
+
+-A tecla 'd' diminui a altura e a largura da figura que está em foco
+
+-A tecla 'delete' remove a figura que está em foco
