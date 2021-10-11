@@ -1,4 +1,4 @@
-package figures;
+package figuress;
 import java.awt.*; 
 import java.applet.*; 
 import javax.swing.*;
@@ -10,17 +10,17 @@ import java.awt.Toolkit;
 
 public abstract class Figure {
     public int x,y,w,h;
-    public Color corfundo;
-    public Color corborda;
+    public Color fundoCor;
+    public Color contornoCor;
     public abstract void paint (Graphics g);
 
-    public Figure(int x,int y,int w,int h,Color corfundo,Color corborda){
-        this.x=x;
-        this.y=y;
-        this.w=w;
-        this.h=h;
-        this.corborda = corborda;
-        this.corfundo = corfundo;
+    public Figure(int x,int y,int w,int h,Color fundoCor,Color contornoCor){
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        this.fundoCor = fundoCor;
+        this.contornoCor = contornoCor;
     }
     
 
