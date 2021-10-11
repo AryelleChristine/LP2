@@ -1,31 +1,45 @@
 package figures;
-
-import java.awt.Graphics;
+import java.awt.*; 
+import java.applet.*; 
+import javax.swing.*;
 import java.awt.*;
+import java.awt.Graphics;
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Toolkit;
 
 public abstract class Figure {
-
-    public int x, y;
-    public int w, h;
-    public int r, g, b, r1, g1, b1;
-    
-    public Figure (int x, int y, int w, int h, int r, int g, int b, int r1, int g1, int b1) {
-        this.x = x;
-        this.y = y;
-        this.w = w;
-        this.h = h;
-        this.r = r;
-        this.g = g;
-        this.b = b;
-        this.r1 = r1;
-        this.g1 = g1;
-        this.b1 = b1;
-    }
-
-    public boolean clicked (int coordX, int coordY) {
-          return (((x <= coordX) && (y <= coordY)) && ((coordX <= (x + w)) && (coordY <= (y + h))));
-    }
-
+    public int x,y,w,h;
+    public Color corfundo;
+    public Color corborda;
     public abstract void paint (Graphics g);
 
+    public Figure(int x,int y,int w,int h,Color corfundo,Color corborda){
+        this.x=x;
+        this.y=y;
+        this.w=w;
+        this.h=h;
+        this.corborda = corborda;
+        this.corfundo = corfundo;
+    }
+    
+
+    public boolean clicked (int posX, int posY) {
+          return (((x <= posX) && (y <= posY)) && ((posX <= (x + w)) && (posY <= (y + h))));
+    }
+    
+
+    public Color contorno = new Color(255,10,10);
+    public Color preenchimento = new Color(255,255,255);
+
+    public void desenharBorda(Graphics g){
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setColor(contorno);
+        g2d.drawRect(this.x-4,this.y-4,this.w+8,this.h+8);
+    }
+    public void preencherFig(Graphics g){
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setColor(preenchimento);
+        g2d.fillRect(this.x-4,this.y-4,this.w+8,this.h+8);
+    }
 }
