@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 import java.awt.Toolkit;
-import figuress.*;
+import figures.*;
 import java.util.Random;
 
 class Projeto {
