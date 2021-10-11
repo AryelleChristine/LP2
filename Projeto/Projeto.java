@@ -5,31 +5,33 @@ import java.awt.event.MouseEvent;
 import javax.swing.*;
 import javax.swing.JFrame;
 import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.JPanel;
 import java.awt.Toolkit;
 import figures.*;
-import java.util.Random;
+
 
 class Projeto {
     public static void main (String[] args) {
-        ListFrame frame = new ListFrame();
+        ProjetoFrame frame = new ProjetoFrame();
         frame.setVisible(true);
         
     }
 }
 
-class ListFrame extends JFrame {
+class ProjetoFrame extends JFrame {
     ArrayList<Figure> figs = new ArrayList<Figure>();
     Random rand = new Random();
     Figure focus = null;
     Point pMouse = null;
+    
 
     int dx,dy;
     int contcontorno=1;
     int contpreenchimento=0;
-    Color cores[] = {Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW, Color.MAGENTA, Color.CYAN, Color.WHITE, Color.BLACK, Color.GRAY, Color.LIGHT_GRAY, Color.DARK_GRAY, Color.PINK, Color.ORANGE};
+    Color cores[] = {Color.red, Color.green, Color.blue, Color.yellow, Color.magenta, Color.cyan, Color.white, Color.black,Color.pink, Color.orange};
 
-    ListFrame () {
+    ProjetoFrame () {
         this.addWindowListener (
             new WindowAdapter() {
                 public void windowClosing (WindowEvent e) {
@@ -88,17 +90,17 @@ class ListFrame extends JFrame {
                     Color preenchimento = cores[contpreenchimento];
                         
                     if (evt.getKeyChar() == 'r') {
-                        Rect r = new Rect(x,y, w,h,Color.magenta,Color.cyan);
+                        Rect r = new Rect(x,y, w,h,Color.cyan,Color.black);
                         figs.add(r);
 
                         
                     }
                     else if (evt.getKeyChar() == 'e') {
-                        figs.add(new Ellipse(x,y,w,h,Color.blue,Color.yellow));
+                        figs.add(new Ellipse(x,y,w,h,Color.red,Color.yellow));
                        
                     }
                     else if (evt.getKeyChar() == 't'){
-                        figs.add(new Triangle(x,y,w,h,Color.green,Color.red));
+                        figs.add(new Triangle(x,y,w,h,Color.blue,Color.green));
                         
                     }
                     else if (evt.getKeyChar() == 'h'){
@@ -153,6 +155,7 @@ class ListFrame extends JFrame {
                                 contcontorno++;
                             }
                             focus.contorno=cores[contcontorno];
+			    
 
                         }
                         else if (evt.getKeyChar()=='p'){
@@ -183,5 +186,5 @@ class ListFrame extends JFrame {
             }
             fig.paint(g);
         }
-    }   
+    } 
 }
