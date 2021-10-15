@@ -1,32 +1,32 @@
-interface Saveable{
-  void open(int a);
-  int save(int o);
+interface Saveable{ //guardavel
+  void open(int acao); //abrir
+  int save(int objeto); //guardar
 }
 
 class Refrigerator implements Saveable{
-  void open (int a){
+  void open (int acao){
     ...
    }
-  int save (int o){
+  int save (int oobjeto){
     ...
    }
 }
 
 class Cabinet implements Saveable{
-  void open(int a){
+  void open(int acao){
     ...
     }
-  int save (int o){
+  int save (int objeto){
     ...
     }
 }
 
 
 class Handbag implements Saveable{
-  void open(int a){
+  void open(int acao){
     ...
     }
-  int save(int o){
+  int save(int objeto){
     ...
     }
 }
