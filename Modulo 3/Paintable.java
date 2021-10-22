@@ -1,32 +1,32 @@
 interface Paintable{ //pintavel
-  int topaint(void); //pintar
-  int sand (void); //lixar
+  int topaint(int objeto); //pintar
+  int sand (int objeto); //lixar
 }
-
+//os dois parametros sao os obejtos porque sao eles que serao pintados ou lixados
 class Wall implements Paintable{
-  int topaint (void){
+  int topaint (int objeto){
     ...
     }
-  int sand (void){
+  int sand (int objeto){
     ...
     }
 }
 
 class Nail implements Paintable{
-  int topaint (void){
+  int topaint (int objeto){
     ...
     }
-  int sand (void){
+  int sand (int objeto){
     ...
     }
 }
 
 
 class Door implements Paintable{
-  int topaint(void){
+  int topaint(int objeto){
     ...
     }
-  int sand (void){
+  int sand (int objeto){
     ...
     }
 }
