@@ -26,9 +26,9 @@ class ProjetoFrame extends JFrame {
     Point pMouse = null;
     
 
-    int dx,dy;
-    int contcontorno=1;
-    int contpreenchimento=0;
+    private int dx,dy;
+    private int contcontorno=1;
+    private int contpreenchimento=0;
     Color cores[] = {Color.red, Color.green, Color.blue, Color.yellow, Color.magenta, Color.cyan, Color.white, Color.black,Color.pink, Color.orange};
 
     ProjetoFrame () {
